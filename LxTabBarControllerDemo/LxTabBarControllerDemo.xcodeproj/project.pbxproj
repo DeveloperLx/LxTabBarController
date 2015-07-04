@@ -13,19 +13,8 @@
 		BF5C55941ADCAF4600A9123C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5C55921ADCAF4600A9123C /* Main.storyboard */; };
 		BF5C55961ADCAF4600A9123C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5C55951ADCAF4600A9123C /* Images.xcassets */; };
 		BF5C55991ADCAF4600A9123C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF5C55971ADCAF4600A9123C /* LaunchScreen.xib */; };
-		BF5C55A51ADCAF4600A9123C /* LxTabBarControllerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5C55A41ADCAF4600A9123C /* LxTabBarControllerDemoTests.m */; };
 		BF5C55B11ADCAFDC00A9123C /* LxTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5C55B01ADCAFDC00A9123C /* LxTabBarController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		BF5C559F1ADCAF4600A9123C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BF5C557D1ADCAF4600A9123C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BF5C55841ADCAF4600A9123C;
-			remoteInfo = LxTabBarControllerDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BF5C55851ADCAF4600A9123C /* LxTabBarControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LxTabBarControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,22 +27,12 @@
 		BF5C55931ADCAF4600A9123C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF5C55951ADCAF4600A9123C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		BF5C55981ADCAF4600A9123C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		BF5C559E1ADCAF4600A9123C /* LxTabBarControllerDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LxTabBarControllerDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF5C55A31ADCAF4600A9123C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF5C55A41ADCAF4600A9123C /* LxTabBarControllerDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LxTabBarControllerDemoTests.m; sourceTree = "<group>"; };
 		BF5C55AF1ADCAFDC00A9123C /* LxTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LxTabBarController.h; path = ../../LxTabBarController/LxTabBarController.h; sourceTree = "<group>"; };
 		BF5C55B01ADCAFDC00A9123C /* LxTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LxTabBarController.m; path = ../../LxTabBarController/LxTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BF5C55821ADCAF4600A9123C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF5C559B1ADCAF4600A9123C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,7 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				BF5C55871ADCAF4600A9123C /* LxTabBarControllerDemo */,
-				BF5C55A11ADCAF4600A9123C /* LxTabBarControllerDemoTests */,
 				BF5C55861ADCAF4600A9123C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				BF5C55851ADCAF4600A9123C /* LxTabBarControllerDemo.app */,
-				BF5C559E1ADCAF4600A9123C /* LxTabBarControllerDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,23 +79,6 @@
 			children = (
 				BF5C55891ADCAF4600A9123C /* Info.plist */,
 				BF5C558A1ADCAF4600A9123C /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		BF5C55A11ADCAF4600A9123C /* LxTabBarControllerDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				BF5C55A41ADCAF4600A9123C /* LxTabBarControllerDemoTests.m */,
-				BF5C55A21ADCAF4600A9123C /* Supporting Files */,
-			);
-			path = LxTabBarControllerDemoTests;
-			sourceTree = "<group>";
-		};
-		BF5C55A21ADCAF4600A9123C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BF5C55A31ADCAF4600A9123C /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,24 +112,6 @@
 			productReference = BF5C55851ADCAF4600A9123C /* LxTabBarControllerDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BF5C559D1ADCAF4600A9123C /* LxTabBarControllerDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BF5C55AB1ADCAF4600A9123C /* Build configuration list for PBXNativeTarget "LxTabBarControllerDemoTests" */;
-			buildPhases = (
-				BF5C559A1ADCAF4600A9123C /* Sources */,
-				BF5C559B1ADCAF4600A9123C /* Frameworks */,
-				BF5C559C1ADCAF4600A9123C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BF5C55A01ADCAF4600A9123C /* PBXTargetDependency */,
-			);
-			name = LxTabBarControllerDemoTests;
-			productName = LxTabBarControllerDemoTests;
-			productReference = BF5C559E1ADCAF4600A9123C /* LxTabBarControllerDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,10 +123,6 @@
 				TargetAttributes = {
 					BF5C55841ADCAF4600A9123C = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					BF5C559D1ADCAF4600A9123C = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = BF5C55841ADCAF4600A9123C;
 					};
 				};
 			};
@@ -202,7 +140,6 @@
 			projectRoot = "";
 			targets = (
 				BF5C55841ADCAF4600A9123C /* LxTabBarControllerDemo */,
-				BF5C559D1ADCAF4600A9123C /* LxTabBarControllerDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,13 +152,6 @@
 				BF5C55941ADCAF4600A9123C /* Main.storyboard in Resources */,
 				BF5C55991ADCAF4600A9123C /* LaunchScreen.xib in Resources */,
 				BF5C55961ADCAF4600A9123C /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BF5C559C1ADCAF4600A9123C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,23 +169,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BF5C559A1ADCAF4600A9123C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BF5C55A51ADCAF4600A9123C /* LxTabBarControllerDemoTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		BF5C55A01ADCAF4600A9123C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BF5C55841ADCAF4600A9123C /* LxTabBarControllerDemo */;
-			targetProxy = BF5C559F1ADCAF4600A9123C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BF5C55921ADCAF4600A9123C /* Main.storyboard */ = {
@@ -311,7 +225,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -347,7 +261,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -360,7 +274,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LxTabBarControllerDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -371,43 +285,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LxTabBarControllerDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		BF5C55AC1ADCAF4600A9123C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LxTabBarControllerDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LxTabBarControllerDemo.app/LxTabBarControllerDemo";
-			};
-			name = Debug;
-		};
-		BF5C55AD1ADCAF4600A9123C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = LxTabBarControllerDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LxTabBarControllerDemo.app/LxTabBarControllerDemo";
 			};
 			name = Release;
 		};
@@ -428,15 +308,6 @@
 			buildConfigurations = (
 				BF5C55A91ADCAF4600A9123C /* Debug */,
 				BF5C55AA1ADCAF4600A9123C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BF5C55AB1ADCAF4600A9123C /* Build configuration list for PBXNativeTarget "LxTabBarControllerDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BF5C55AC1ADCAF4600A9123C /* Debug */,
-				BF5C55AD1ADCAF4600A9123C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
