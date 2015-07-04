@@ -144,7 +144,7 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
         _switchType = LxTabBarControllerSwitchTypeUnknown;
     }
     
-    progress = MIN(1.0, MAX(0.0, fabs(progress)));
+    progress = MIN(1.0, MAX(0.0, ABS(progress)));
     
     switch (pan.state) {
         case UIGestureRecognizerStateBegan:
@@ -188,23 +188,23 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
         case UIGestureRecognizerStateFailed:
         {
             _isTranslating = NO;
-            if (self.panGestureRecognizerBeginBlock) {
-                self.panGestureRecognizerBeginBlock(LxTabBarControllerInteractionStopReasonFailed);
+            if (self.panGestureRecognizerStopBlock) {
+                self.panGestureRecognizerStopBlock(LxTabBarControllerInteractionStopReasonFailed);
             }
         }
             break;
         default:
         {
-            if (fabs(progress) > 0.5) {
+            if (ABS(progress) > 0.5) {
                 [_interactiveTransition finishInteractiveTransition];
-                if (self.panGestureRecognizerBeginBlock) {
-                    self.panGestureRecognizerBeginBlock(LxTabBarControllerInteractionStopReasonFinished);
+                if (self.panGestureRecognizerStopBlock) {
+                    self.panGestureRecognizerStopBlock(LxTabBarControllerInteractionStopReasonFinished);
                 }
             }
             else {
                 [_interactiveTransition cancelInteractiveTransition];
-                if (self.panGestureRecognizerBeginBlock) {
-                    self.panGestureRecognizerBeginBlock(LxTabBarControllerInteractionStopReasonCancelled);
+                if (self.panGestureRecognizerStopBlock) {
+                    self.panGestureRecognizerStopBlock(LxTabBarControllerInteractionStopReasonCancelled);
                 }
             }
             _interactiveTransition = nil;

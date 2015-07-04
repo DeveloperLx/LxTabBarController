@@ -34,11 +34,11 @@
     
     label.translatesAutoresizingMaskIntoConstraints = NO;
     
-    NSArray * pushLabelConstraintsH = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-30-[label]-30-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(label)];
-    NSArray * pushLabelConstraintsV = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-90-[label(==48)]" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(label)];
+    NSArray * labelConstraintsH = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-30-[label]-30-|" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(label)];
+    NSArray * labelConstraintsV = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-90-[label(==48)]" options:NSLayoutFormatDirectionLeadingToTrailing metrics:nil views:NSDictionaryOfVariableBindings(label)];
     
-    [self.view addConstraints:pushLabelConstraintsH];
-    [self.view addConstraints:pushLabelConstraintsV];
+    [self.view addConstraints:labelConstraintsH];
+    [self.view addConstraints:labelConstraintsV];
 }
 
 @end
