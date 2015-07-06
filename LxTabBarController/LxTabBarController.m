@@ -132,6 +132,8 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
 
 - (void)panGestureRecognizerTriggerd:(UIPanGestureRecognizer *)pan
 {
+    //disable tabbar when transitioning
+    self.tabBar.userInteractionEnabled = NO;
     CGFloat progress = [pan translationInView:pan.view].x / pan.view.bounds.size.width;
     
     if (progress > 0) {
@@ -188,6 +190,7 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
         case UIGestureRecognizerStateFailed:
         {
             _isTranslating = NO;
+            self.tabBar.userInteractionEnabled = YES;
             if (self.panGestureRecognizerStopBlock) {
                 self.panGestureRecognizerStopBlock(LxTabBarControllerInteractionStopReasonFailed);
             }
@@ -209,6 +212,10 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
             }
             _interactiveTransition = nil;
             _isTranslating = NO;
+            //enable tabbar when transition ended
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(TRANSITION_DURATION * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                self.tabBar.userInteractionEnabled = YES;
+            });
         }
             break;
     }
