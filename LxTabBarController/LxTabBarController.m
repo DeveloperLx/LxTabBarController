@@ -120,14 +120,24 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
 
 - (id<UIViewControllerInteractiveTransitioning>)tabBarController:(UITabBarController *)tabBarController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
 {
-    return [animationController isKindOfClass:[Transition class]]?_interactiveTransition:nil;
+    if (self.view.window) {
+        return [animationController isKindOfClass:[Transition class]] ? _interactiveTransition : nil;
+    }
+    else {
+        return nil;
+    }    
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)tabBarController:(UITabBarController *)tabBarController
             animationControllerForTransitionFromViewController:(UIViewController *)fromVC
                                               toViewController:(UIViewController *)toVC
 {
-    return [[Transition alloc]init];
+    if (self.view.window) {
+        return [[Transition alloc]init];
+    }
+    else {
+        return nil;
+    }
 }
 
 - (void)panGestureRecognizerTriggerd:(UIPanGestureRecognizer *)pan
