@@ -71,7 +71,7 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
 #pragma mark - LxTabBarController
 
 @interface LxTabBarController () <UITabBarControllerDelegate,UIGestureRecognizerDelegate>
-
+@property (strong, nonatomic) Transition *transitionAnimator;
 @end
 
 @implementation LxTabBarController
@@ -105,6 +105,7 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
     _panToSwitchGestureRecognizer.delegate = self;
     _panToSwitchGestureRecognizer.cancelsTouchesInView = NO;
     _panToSwitchGestureRecognizer.maximumNumberOfTouches = 1;
+    _transitionAnimator = [Transition new];
     [self.view addGestureRecognizer:_panToSwitchGestureRecognizer];
 }
 
@@ -127,7 +128,7 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
             animationControllerForTransitionFromViewController:(UIViewController *)fromVC
                                               toViewController:(UIViewController *)toVC
 {
-    return [[Transition alloc]init];
+    return self.transitionAnimator;
 }
 
 - (void)panGestureRecognizerTriggerd:(UIPanGestureRecognizer *)pan
@@ -213,7 +214,7 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
             _interactiveTransition = nil;
             _isTranslating = NO;
             //enable tabbar when transition ended
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(TRANSITION_DURATION * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 self.tabBar.userInteractionEnabled = YES;
             });
         }
