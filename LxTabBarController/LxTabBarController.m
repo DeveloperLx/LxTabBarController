@@ -71,7 +71,7 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
 #pragma mark - LxTabBarController
 
 @interface LxTabBarController () <UITabBarControllerDelegate,UIGestureRecognizerDelegate>
-
+@property (strong, nonatomic) Transition *transitionAnimator;
 @end
 
 @implementation LxTabBarController
@@ -105,6 +105,7 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
     _panToSwitchGestureRecognizer.delegate = self;
     _panToSwitchGestureRecognizer.cancelsTouchesInView = NO;
     _panToSwitchGestureRecognizer.maximumNumberOfTouches = 1;
+    _transitionAnimator = [Transition new];
     [self.view addGestureRecognizer:_panToSwitchGestureRecognizer];
 }
 
@@ -133,7 +134,7 @@ static LxTabBarControllerSwitchType _switchType = LxTabBarControllerSwitchTypeUn
                                               toViewController:(UIViewController *)toVC
 {
     if (self.view.window) {
-        return [[Transition alloc]init];
+        return self.transitionAnimator;
     }
     else {
         return nil;
