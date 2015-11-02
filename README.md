@@ -7,6 +7,9 @@
 Installation
 ------------
     You only need drag LxTabBarController.h and LxTabBarController.m to your project.
+Podfile
+------------
+    pod 'LxTabBarController', '~> 1.0.0'
     
 Support
 ------------
