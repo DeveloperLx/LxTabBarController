@@ -19,8 +19,8 @@ Usage
 ----------
 `Use LxTabBarController as same as UITabBarController.`
 
-
-	ViewController * vc1 = [[ViewController alloc]init];
+```objc
+    ViewController * vc1 = [[ViewController alloc]init];
     UINavigationController * nc1 = [[UINavigationController alloc]initWithRootViewController:vc1];
     
     ViewController * vc2 = [[ViewController alloc]init];
@@ -34,7 +34,7 @@ Usage
     
     LxTabBarController * tabBarController = [[LxTabBarController alloc]init];
     tabBarController.viewControllers = @[nc1,nc2,nc3,nc4];
-
+```
 BE CAREFUL!
 -----------
 
