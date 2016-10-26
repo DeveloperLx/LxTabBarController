@@ -1,5 +1,5 @@
 # LxTabBarController
-	Inherited from UITabBarController. To change UITabBarController interactive mode, LxTabBarController add a powerful gesture you can switch view controller by sweeping screen from left the right or right to left.
+	Inherited from UITabBarController. To change UITabBarController interactive mode, LxTabBarController add a powerful gesture you can switch view controller by sweeping screen from left to right or right to left.
 	
 *	![demo](demo.gif)
 
